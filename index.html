@@ -5,57 +5,125 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AppDev Portfolio</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <style>
-            /* Bouncy hover effect for buttons */
+            @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=DM+Serif+Text:ital@0;1&family=Martian+Mono:wght@100..800&family=Nabla&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=VT323&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
             .hover-bounce:hover {
                 transform: scale(1.1);
                 transition: transform 0.2s ease-in-out;
             }
+
+            .hover-glow:hover {
+                box-shadow: 0 4px 15px rgba(0, 122, 204, 0.5);
+                transition: box-shadow 0.3s ease-in-out;
+            }
         </style>
     </head>
-    <body class="flex items-center justify-center min-h-screen bg-[#22144c]">
-        <div class="max-w-4xl w-full mx-4 lg:mx-auto p-6 lg:p-8 shadow-md rounded-lg text-center bg-[#fceff9] space-y-12">
-            <!-- Photo and Name Section -->
+    <body class="bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-[#333333] min-h-screen py-10">
+        <!-- Initialize AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- Photo and Name Section -->
+        <div class="max-w-4xl mx-auto p-8 shadow-lg rounded-lg bg-white text-center text-[#333333] mb-10" data-aos="fade-down">
             <div>
                 <img
-                    src="images/IMG_4549.jpg"
+                    src="images/IMG_Andreiicon.jpg"
                     alt="My Photo"
-                    class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto border-4 border-gray-100"
-                >  
-                <h1 class="text-6xl sm:text-3xl font-bold mt-4 bg-gradient-to-r from-[#f6dd3b] via-[#22144c] to-[#2e3192] bg-clip-text text-transparent">
-                    Michael Andrei Ninora
+                    class="w-28 h-28 sm:w-36 sm:h-36 rounded-full mx-auto border-4 border-[#22144c] shadow-md"
+                >
+                <h1 class="text-3xl sm:text-4xl font-semibold mt-6 tracking-wide">
+                    Michael Andrei Niñora
                 </h1>
-                <p class="text-[#22144c] mt-2 text-sm sm:text-base">Ordinary Frontend Developer at SAMAHAN SysDev</p>
+                <p class="text-lg sm:text-xl mt-2 font-medium">Frontend Developer at SAMAHAN SysDev</p>
             </div>
+        </div>
 
-            <!-- Education Section -->
+        <!-- Education Section -->
+        <div class="max-w-4xl mx-auto p-8 shadow-lg rounded-lg bg-white text-[#333333] mb-10" data-aos="fade-right">
             <section>
-                <h2 class="text-xl sm:text-2xl font-semibold border-b-2 border-gray-300 pb-2">Education</h2>
-                <ul class="mt-4 space-y-2 text-left sm:text-center">
+                <h2 class="text-2xl sm:text-3xl font-semibold border-b-4 border-[#f3dc36] pb-2 inline-block">Education</h2>
+                <ul class="mt-6 space-y-4 text-left sm:text-center">
                     <li>
-                        <p class="font-medium">Bachelor's Degree in Information Technology</p>
-                        <p class="text-[#2e3192]">Ateneo de Davao University - 2027</p>
+                        <p class="font-semibold text-lg">Bachelor's Degree in Information Technology</p>
+                        <p class="text-base">Ateneo de Davao University - 2027</p>
                     </li>
                 </ul>
             </section>
+        </div>
 
-            <!-- Projects Section -->
+        <!-- Affiliation Section -->
+        <div class="max-w-4xl mx-auto p-8 shadow-lg rounded-lg bg-white text-[#333333] mb-10" data-aos="fade-left">
             <section>
-                <h2 class="text-xl sm:text-2xl font-semibold border-b-2 border-gray-100 pb-2">Projects</h2>
-                <ul class="mt-4 space-y-4 text-left sm:text-center">
+                <h2 class="text-2xl sm:text-3xl font-semibold border-b-4 border-[#f3dc36] pb-2 inline-block">Affiliation</h2>
+                <ul class="mt-6 space-y-4 text-left sm:text-center">
                     <li>
-                        <p class="font-medium">SysDev NextJS Portfolio</p>
-                        <p class="text-[#2e3192]">A nextJS framework portfolio where it is also my technical assessment in getting the frontend role in SysDev</p>
+                        <p class="font-semibold text-lg">SAMAHAN Systems Development</p>
+                        <p class="text-base">Frontend Developer</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="max-w-4xl mx-auto p-8 shadow-lg rounded-lg bg-white text-[#333333] mb-10" data-aos="zoom-in">
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-semibold border-b-4 border-[#f3dc36] pb-2 inline-block">Projects</h2>
+                <ul class="mt-6 space-y-6 text-left sm:text-center">
+                    <li>
+                        <p class="font-semibold text-lg">SysDev NextJS Portfolio</p>
+                        <p class="text-base">A NextJS framework portfolio created as a technical assessment for the frontend role at SysDev.</p>
                     </li>
                     <li>
-                        <p class="font-medium">TutorLinked</p>
-                        <p class="text-[#2e3192]">A user-friendly frontend web application for an online tutoring platform, featuring a full CRUD booking system for managing tutoring sessions.</p>
-                        <a href="https://simple-crud-frontend-sage.vercel.app/?fbclid=PAZXh0bgNhZW0CMTEAAafrhPSksHztfzbWja9xhslfKOrmjIDmAAnC3_Ec3DMSklw52jAXJKX-OW3UVg_aem_C0XHX9exDsqxc9cXaijtww" target="_blank" class="mt-2 inline-block px-4 py-2 bg-[#7303c0] text-white rounded-lg hover:bg-[#5a0299] transition hover-bounce">
+                        <p class="font-semibold text-lg">TutorLinked</p>
+                        <p class="text-base">A user-friendly NextJS frontend web application for an online tutoring platform, featuring a full CRUD booking system for managing tutoring sessions.</p>
+                        <a href="https://simple-crud-frontend-sage.vercel.app/?fbclid=PAZXh0bgNhZW0CMTEAAafrhPSksHztfzbWja9xhslfKOrmjIDmAAnC3_Ec3DMSklw52jAXJKX-OW3UVg_aem_C0XHX9exDsqxc9cXaijtww" 
+                           target="_blank" 
+                           class="mt-4 inline-block px-6 py-3 bg-gradient-to-r from-[#007acc] to-[#66b2ff] text-white font-semibold rounded-lg shadow-md hover:from-[#005f99] hover:to-[#004f80] hover:shadow-lg transition-all duration-300">
                             Visit CRUD Web App
                         </a>
                     </li>
                 </ul>
             </section>
         </div>
+
+        <!-- Skills Section -->
+        <div class="max-w-4xl mx-auto p-8 shadow-lg rounded-lg bg-white text-[#333333]" data-aos="fade-up">
+            <section>
+                <h2 class="text-2xl sm:text-3xl font-semibold border-b-4 border-[#f3dc36] pb-2 inline-block">Skills</h2>
+                <ul class="mt-6 flex flex-wrap gap-4 justify-center">
+                 
+                    <li class="bg-[#22144c] text-[#f3dc36] font-bold px-6 py-3 rounded-md text-sm sm:text-base shadow-md hover-bounce flex items-center gap-2">
+                        <i class="fas fa-code"></i> Frontend Development
+                    </li>
+                 
+                    <li class="bg-[#22144c] text-[#f3dc36] font-bold px-6 py-3 rounded-md text-sm sm:text-base shadow-md hover-bounce flex items-center gap-2">
+                        <i class="fas fa-video"></i> Cinematography
+                    </li>
+                   
+                    <li class="bg-[#22144c] text-[#f3dc36] font-bold px-6 py-3 rounded-md text-sm sm:text-base shadow-md hover-bounce flex items-center gap-2">
+                        <i class="fas fa-film"></i> Video Editing
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="text-white py-8 mt-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-[#f3dc36]">Let's Collab and Connect!</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-200">
+                    Thank you for taking the time to view my portfolio. Feel free to reach out for collaborations or opportunities!
+                </p>
+            </div>
+        </footer>
     </body>
 </html>
